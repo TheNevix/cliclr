@@ -5,6 +5,7 @@ authors = ["TheNevix"]
 edition = "2021"
 description = "A very simple wrapper for termcolor"
 repository = "https://github.com/TheNevix/cliclr"
+license = "MIT"
 
 [dependencies]
 termcolor = "1.1.2"
