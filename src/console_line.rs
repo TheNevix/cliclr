@@ -1,6 +1,6 @@
-pub extern  crate termcolor;
+pub extern crate termcolor;
 
-use termcolor::{ColorSpec, StandardStream, WriteColor, Color};
+use termcolor::{Color, ColorSpec, StandardStream, WriteColor};
 
 pub struct ConsoleLine{
     pub text: String,
@@ -28,12 +28,22 @@ impl ConsoleLine{
         println!("{}", &self.text);
         stdout.reset().unwrap();
     }
+
+    /// Prints colored text that has a specefied background color to the standard output.
+    /// 
+    /// # Parameters
+    /// - `stdout`: A mutable reference to a `StandardStream` to handle colored output.
+    /// - `background_color`: A color from termcolor to set the background color of the output.
+    pub fn print_background_color_text(&self, stdout: &mut StandardStream, background_color: Color){
+        stdout.set_color(ColorSpec::new().set_fg(Some(self.color)).set_bg(Some(background_color))).unwrap();
+        println!("{}", &self.text);
+        stdout.reset().unwrap();
+    }
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
-    use std::io::stdout;
 
     #[test]
     fn test_print_colored_text() {
