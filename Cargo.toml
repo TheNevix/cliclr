@@ -1,9 +1,10 @@
 [package]
 name = "cliclr"
 version = "0.1.0"
+authors = ["TheNevix"]
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+description = "A very simple wrapper for termcolor"
+repository = "https://github.com/TheNevix/cliclr"
 
 [dependencies]
 termcolor = "1.1.2"
