@@ -1,9 +1,9 @@
 [package]
 name = "cliclr"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["TheNevix"]
 edition = "2021"
-description = "A very simple wrapper for termcolor"
+description = "A very simple wrapper for termcolor."
 repository = "https://github.com/TheNevix/cliclr"
 license = "MIT"
 
